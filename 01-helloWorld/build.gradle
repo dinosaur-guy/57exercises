@@ -24,4 +24,5 @@ wrapper {
 
 run{
     standardInput = System.in
+    standardOutput = System.out
 }
