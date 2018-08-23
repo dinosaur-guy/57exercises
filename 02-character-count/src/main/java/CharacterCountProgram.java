@@ -20,7 +20,16 @@ public class CharacterCountProgram {
         String prompt = "What is the input string? ";
         writer.write(prompt);
         writer.flush();
-        return reader.readLine();
+
+        String input = reader.readLine();
+
+        if (input.length() <= 0) {
+            writer.write("Empty strings are not allowed. Try again...\n");
+            writer.flush();
+            return askForInput();
+        }
+
+        return input;
     }
 
     private void showCharacterCount(String name) throws IOException {
