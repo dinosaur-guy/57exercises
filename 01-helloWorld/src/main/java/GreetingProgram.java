@@ -20,7 +20,7 @@ public class GreetingProgram {
 
     private String askForName() throws IOException {
         String prompt = "What is your name? ";
-        writer.write(prompt, 0, prompt.length());
+        writer.write(prompt);
         writer.flush();
         return reader.readLine();
     }
