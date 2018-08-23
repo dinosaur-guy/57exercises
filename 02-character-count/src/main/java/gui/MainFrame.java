@@ -21,6 +21,16 @@ public class MainFrame extends JFrame {
 
         panel = new JPanel();
         inputCharactersField = new JTextField(10);
+
+        inputCharactersLabel = new JLabel("What is your input string?");
+        showCharacterCountLabel = new JLabel(EMPTY_INPUT);
+
+        panel.add(inputCharactersLabel);
+        panel.add(inputCharactersField);
+        panel.add(showCharacterCountLabel);
+
+        this.add(panel);
+
         inputCharactersField.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -37,15 +47,6 @@ public class MainFrame extends JFrame {
                 updateCharacterCount();
             }
         });
-
-        inputCharactersLabel = new JLabel("What is your input string?");
-        showCharacterCountLabel = new JLabel(EMPTY_INPUT);
-
-        panel.add(inputCharactersLabel);
-        panel.add(inputCharactersField);
-        panel.add(showCharacterCountLabel);
-
-        this.add(panel);
     }
 
     private void updateCharacterCount() {

@@ -6,6 +6,7 @@ import java.io.*;
 public class CharacterCountApplication {
     public static void main(String[] args) throws IOException {
         executeGuiProgram();
+        //executeConsoleProgram();
     }
 
     private static void executeConsoleProgram() throws IOException {
