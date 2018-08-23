@@ -14,8 +14,6 @@ public class GreetingProgram {
     }
 
     public void execute() throws IOException {
-        writer.write("output");
-        writer.flush();
         String name = askForName();
         showGreeting(name);
     }
