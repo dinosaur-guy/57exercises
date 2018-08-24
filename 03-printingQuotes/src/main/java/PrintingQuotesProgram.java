@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.List;
 
 public class PrintingQuotesProgram {
     private BufferedReader reader;
@@ -28,4 +29,15 @@ public class PrintingQuotesProgram {
         writer.write(output);
         writer.flush();
     }
+
+    public void printListOfQuotes() throws IOException {
+        List<Quote> quotes = DummyQuotes.getQuotes();
+        for (Quote quote : quotes) {
+            String escapedQuote = produceQuoteString(quote.getAuthor(), quote.getQuote());
+            writer.write(escapedQuote);
+            writer.newLine();
+            writer.flush();
+        }
+    }
+
 }
